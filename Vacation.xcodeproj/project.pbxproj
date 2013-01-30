@@ -10,6 +10,11 @@
 		A401807916B9AA4600603757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A401807816B9AA4600603757 /* Foundation.framework */; };
 		A401807C16B9AA4600603757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A401807B16B9AA4600603757 /* main.m */; };
 		A401808016B9AA4600603757 /* Vacation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A401807F16B9AA4600603757 /* Vacation.1 */; };
+		A401808F16B9AAE700603757 /* Budget.m in Sources */ = {isa = PBXBuildFile; fileRef = A401808816B9AAE700603757 /* Budget.m */; };
+		A401809016B9AAE700603757 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = A401808A16B9AAE700603757 /* Transaction.m */; };
+		A401809116B9AAE700603757 /* CashTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = A401808C16B9AAE700603757 /* CashTransaction.m */; };
+		A401809216B9AAE700603757 /* CreditCardTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = A401808E16B9AAE700603757 /* CreditCardTransaction.m */; };
+		A401809516B9ABA500603757 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = A401809416B9ABA500603757 /* Destination.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,16 @@
 		A401807B16B9AA4600603757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A401807E16B9AA4600603757 /* Vacation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vacation-Prefix.pch"; sourceTree = "<group>"; };
 		A401807F16B9AA4600603757 /* Vacation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Vacation.1; sourceTree = "<group>"; };
+		A401808716B9AAE700603757 /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Budget.h; sourceTree = "<group>"; };
+		A401808816B9AAE700603757 /* Budget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Budget.m; sourceTree = "<group>"; };
+		A401808916B9AAE700603757 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		A401808A16B9AAE700603757 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		A401808B16B9AAE700603757 /* CashTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashTransaction.h; sourceTree = "<group>"; };
+		A401808C16B9AAE700603757 /* CashTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashTransaction.m; sourceTree = "<group>"; };
+		A401808D16B9AAE700603757 /* CreditCardTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardTransaction.h; sourceTree = "<group>"; };
+		A401808E16B9AAE700603757 /* CreditCardTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardTransaction.m; sourceTree = "<group>"; };
+		A401809316B9ABA500603757 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
+		A401809416B9ABA500603757 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +88,7 @@
 		A401807A16B9AA4600603757 /* Vacation */ = {
 			isa = PBXGroup;
 			children = (
+				A401808616B9AAA400603757 /* Classes */,
 				A401807B16B9AA4600603757 /* main.m */,
 				A401807F16B9AA4600603757 /* Vacation.1 */,
 				A401807D16B9AA4600603757 /* Supporting Files */,
@@ -86,6 +102,23 @@
 				A401807E16B9AA4600603757 /* Vacation-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A401808616B9AAA400603757 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A401808716B9AAE700603757 /* Budget.h */,
+				A401808816B9AAE700603757 /* Budget.m */,
+				A401808916B9AAE700603757 /* Transaction.h */,
+				A401808A16B9AAE700603757 /* Transaction.m */,
+				A401808B16B9AAE700603757 /* CashTransaction.h */,
+				A401808C16B9AAE700603757 /* CashTransaction.m */,
+				A401808D16B9AAE700603757 /* CreditCardTransaction.h */,
+				A401808E16B9AAE700603757 /* CreditCardTransaction.m */,
+				A401809316B9ABA500603757 /* Destination.h */,
+				A401809416B9ABA500603757 /* Destination.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A401807C16B9AA4600603757 /* main.m in Sources */,
+				A401808F16B9AAE700603757 /* Budget.m in Sources */,
+				A401809016B9AAE700603757 /* Transaction.m in Sources */,
+				A401809116B9AAE700603757 /* CashTransaction.m in Sources */,
+				A401809216B9AAE700603757 /* CreditCardTransaction.m in Sources */,
+				A401809516B9ABA500603757 /* Destination.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
