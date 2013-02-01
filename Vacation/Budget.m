@@ -17,13 +17,16 @@
 - (void) chargeForeignCurrency:(double)foreignCurrency {
     exchangeTransaction = foreignCurrency * exchangeRate;
     budget -= exchangeTransaction;
-    NSLog(@"Charging %.2f in foreign currency leaves $%.2f", foreignCurrency, budget);
+//    NSLog(@"Charging %.2f in foreign currency leaves $%.2f", foreignCurrency, budget);
 }
 
 - (void) spendDollars:(NSNumber*)dollars {
     budget -= [dollars doubleValue];
-    NSLog(@"Converting $%.2f into foreign currency leaves $%.2f", [dollars doubleValue], budget);
+//    NSLog(@"Converting $%.2f into foreign currency leaves $%.2f", [dollars doubleValue], budget);
 }
 
+- (double) returnBalance{
+    return budget;
+}
 
 @end

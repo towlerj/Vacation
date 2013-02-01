@@ -22,17 +22,15 @@
     // will exist in subclasses
 }
 
+/*
 - (void) trackSpending:(double)theAmount{
     NSLog(@"You are about to spend another %.2f", theAmount);
 }
+*/
 
 - (NSNumber *) returnAmount{
     return amount;
 }
 
-/*
-- (transactionType) returnType {
-    return type;
-}
-*/
+
 @end

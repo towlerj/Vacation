@@ -18,6 +18,6 @@
 
 - (void) createTransaction: (double) theAmount forBudget: (Budget*) aBudget;
 - (void) spend;
-- (void) trackSpending: (double) theAmount;
+// - (void) trackSpending: (double) theAmount;
 
 @end

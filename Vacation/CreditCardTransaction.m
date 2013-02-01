@@ -12,7 +12,7 @@
 @implementation CreditCardTransaction
 
 - (void) spend {
-    [super trackSpending:[amount doubleValue]];
+//    [super trackSpending:[amount doubleValue]];
     [budget chargeForeignCurrency:[amount doubleValue]];
     
 }

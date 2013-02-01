@@ -12,7 +12,7 @@
 @implementation CashTransaction
 
 - (void) spend {
-    [self trackSpending:[amount doubleValue]];
+//    [self trackSpending:[amount doubleValue]];
     [budget spendDollars:amount];
 }
 

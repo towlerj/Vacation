@@ -7,50 +7,44 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Budget.h"
-#import "Transaction.h"
-#import "CashTransaction.h"
-#import "CreditCardTransaction.h"
+#import "Destination.h"
 
 int main(int argc, const char * argv[])
 {
     
+    Destination* europe = [Destination new];
+    NSString* europeText = [[NSString alloc]initWithFormat: @"%@",@"Europe"];
+    [europe createWithCountry:europeText andBudget:1000.00 withExchangeRate:1.25];
+    Destination* england = [Destination new];
+    NSString* englandText = [[NSString alloc]initWithFormat: @"%@",@"England"];
+    [england createWithCountry:englandText andBudget:2000.00 withExchangeRate:1.50];
     
-    Budget *europeBudget = [Budget new];
-    [europeBudget createBudget:1000.00 withExchangeRate:1.2500];
-    
-    Budget *englandBudget = [Budget new];
-    [englandBudget createBudget:2000.00 withExchangeRate:1.5000];
-    
-    
-    NSMutableArray *transactions = [[NSMutableArray alloc] initWithCapacity:10];
-    Transaction *aTransaction;
-    for (int n=1; n<2;n++){
-        aTransaction = [CashTransaction new];
-        [aTransaction createTransaction:n*100 forBudget:europeBudget];
-        [transactions addObject:aTransaction];
+    for (int n=1;n<2;n++){
+        double transaction = n*100.00;
+        NSLog(@"Spending %.2f cash transaction.", transaction);
+        [europe spendCash:transaction];
+        NSLog(@"Remaining cash %.2f", [europe leftToSpend]);
         
-        aTransaction = [CashTransaction new];
-        [aTransaction createTransaction:n*100 forBudget:englandBudget];
-        [transactions addObject:aTransaction];
+        NSLog(@"Spending %.2f cas transaction", transaction);
+        [england spendCash:transaction];
+        NSLog(@"Remaining cash %.2f", [england leftToSpend]);
     }
     
-    int n=1;
-    while (n<4){
-        aTransaction = [CreditCardTransaction new];
-        [aTransaction createTransaction:n*100 forBudget:europeBudget];
-        [transactions addObject:aTransaction];
+    
+        int n=1;
+        while (n<4){
+            double transaction = n*100.00;
+            NSLog(@"Spending %.2f credit card transaction", transaction);
+            [europe chargeCreditCard:transaction];
+            NSLog(@"Remaing cash %.2f", [europe leftToSpend]);
+            NSLog(@"Spending %.2f credit card transaction", transaction);
+            [england chargeCreditCard:transaction];
+            NSLog(@"Remaing cash %.2f", [england leftToSpend]);
+            n++;
+        }
         
-        aTransaction = [CreditCardTransaction new];
-        [aTransaction createTransaction:n*100 forBudget:englandBudget];
-        [transactions addObject:aTransaction];
-        n++;
-    }
-    
-    for (Transaction *aTransaction in transactions){
-        [aTransaction spend];
-    }
     
     return 0;
+    
 }
 
